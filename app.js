@@ -24,7 +24,7 @@ app.use('/users', usersRouter);
 
 
 
-port=6868;
+port=process.env.port || 6868;
 app.listen(port,(req,res)=>{
   console.log(`server is running at http://localhost:${port}`);
 });
